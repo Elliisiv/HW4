@@ -1,0 +1,12 @@
+SELECT
+    CASE
+        WHEN DATEDIFF('YEAR', birthday, CURRENT_DATE) = (SELECT MAX(DATEDIFF('YEAR', birthday, CURRENT_DATE)) FROM worker) THEN 'OLDEST'
+        WHEN DATEDIFF('YEAR', birthday, CURRENT_DATE) = (SELECT MIN(DATEDIFF('YEAR', birthday, CURRENT_DATE)) FROM worker) THEN 'YOUNGEST'
+        ELSE ''
+    END AS TYPE,
+    name,
+    birthday
+FROM worker
+WHERE DATEDIFF('YEAR', birthday, CURRENT_DATE) = (SELECT MAX(DATEDIFF('YEAR', birthday, CURRENT_DATE)) FROM worker) OR
+      DATEDIFF('YEAR', birthday, CURRENT_DATE) = (SELECT MIN(DATEDIFF('YEAR', birthday, CURRENT_DATE)) FROM worker)
+ORDER BY TYPE;

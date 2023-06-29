@@ -1,0 +1,9 @@
+
+i
+java:S2095"GUse try-with-resources or close this "Statement" in a "finally" clause.(€×»Éúÿÿÿÿ8µ¼ßº1
+Z	java:S106"9Replace this use of System.out or System.err by a logger.(»øÅÿÿÿÿÿ8¿¼ßº1
+T	java:S106"9Replace this use of System.out or System.err by a logger.(•ı¬U8À¼ßº1
+M
+java:S1128"0Remove this unused import 'java.nio.file.Paths'.(áè°¯8ß©ßº1
+M
+java:S1128"0Remove this unused import 'java.sql.Connection'.(¥ËôÖ8à©ßº1
